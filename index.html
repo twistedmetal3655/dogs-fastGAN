@@ -1,5 +1,1 @@
-<?php 
-$img_array = glob("dogs/*.{gif,jpg,png}",GLOB_BRACE);
-$img = array_rand($img_array);
-echo '<img alt="'.$img_array[$img].'" src="'.$img_array[$img].'" />'; 
-?>
+<?php $img_array = glob("dogs/*.{gif,jpg,png}",GLOB_BRACE); $img = array_rand($img_array); echo '<img alt="'.$img_array[$img].'" src="'.$img_array[$img].'" />'; ?>
