@@ -1,1 +1,8 @@
+<SCRIPT LANGUAGE="JavaScript">
+$images = glob('dogs/{*.jpg,*.png,*.gif}', GLOB_BRACE);
 
+foreach(array_rand($images,10) as $key) //display 10 image
+{
+    echo '<img src="'.$images[$key].'" />';
+}
+</script>
