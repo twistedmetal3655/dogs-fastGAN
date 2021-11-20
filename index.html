@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
-<script type="text/javascript">
-    $(function() {
-        //array of images, I named them in numerical order for simplicty
-                   var images = glob('dogs/{*.jpg,*.png,*.gif}', GLOB_BRACE);
-                //jQuery function contains path to images, and function to call a random image, please note the url is the correct path to your images!
-                $('.hero').css({'background-image': 'url(img/backgrounds/' + images[Math.floor(Math.random() * images.length)] + ')'});
-                    });
-                 </script>
-</body>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+// Set up the image files to be used.
+var theImages = new Array() // do not change this
+// To add more image files, continue with the
+// pattern below, adding to the array.
     
+for (let i = 0; i < 500; i++) {
+  theImages[i] = 'dogs/'+i+'.png'
+}
+
+// do not edit anything below this line
+
+var j = 0
+var p = theImages.length;
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+   preBuffer[i] = new Image()
+   preBuffer[i].src = theImages[i]
+}
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+document.write('<img src="'+theImages[whichImage]+'">');
+}
+
+showImage();
+//  End -->
+</script>
