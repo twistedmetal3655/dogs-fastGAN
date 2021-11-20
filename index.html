@@ -9,11 +9,15 @@ var theImages = new Array() // do not change this
 // To add more image files, continue with the
 // pattern below, adding to the array.
     
-for (let i = 0; i < 500; i++) {
+for (let i = 0; i < 980; i++) {
   theImages[i] = 'dogs/'+i+'.png'
 }
 
-// do not edit anything below this line
+for (let x = 2; x <= 5; x++) {
+  for (let i = 0; i < 990; i++){
+      theImages[i] = 'dogs/'+x+'- ('+i+')'
+  }
+}
 
 var j = 0
 var p = theImages.length;
