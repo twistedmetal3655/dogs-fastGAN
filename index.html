@@ -1,8 +1,13 @@
-<SCRIPT LANGUAGE="JavaScript">
-$images = glob('dogs/{*.jpg,*.png,*.gif}', GLOB_BRACE);
-
-foreach(array_rand($images,10) as $key) //display 10 image
-{
-    echo '<img src="'.$images[$key].'" />';
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript">
+    $(function() {
+        //array of images, I named them in numerical order for simplicty
+                   var images = glob('dogs/{*.jpg,*.png,*.gif}', GLOB_BRACE);
+                //jQuery function contains path to images, and function to call a random image, please note the url is the correct path to your images!
+                $('.hero').css({'background-image': 'url(img/backgrounds/' + images[Math.floor(Math.random() * images.length)] + ')'});
+                    });
+                 </script>
+</body>
+    
